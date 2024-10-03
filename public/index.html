@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XML to JSON Converter</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>XML to JSON Converter</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" name="xmlFile" accept=".xml" required />
+      <button type="submit">Upload</button>
+    </form>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        <h2>Original XML</h2>
+        <textarea id="xmlContent" readonly></textarea>
+      </div>
+      <div class="flex-item">
+        <h2>Converted JSON</h2>
+        <textarea id="jsonContent" readonly></textarea>
+      </div>
+    </div>
+
+    <div id="downloadSection" style="display: none;">
+      <button id="downloadButton">Download JSON File</button>
+    </div>
+
+    <div class="error" id="errorMessage"></div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
